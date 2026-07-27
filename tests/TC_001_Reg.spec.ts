@@ -3,11 +3,12 @@ import {expect, test} from '@playwright/test'
 import { RegisrationPage } from '../pages/registrationPage'
 import { HomePage } from '../pages/homePage'
 import { TestConfig } from '../test.config'
+import '../hooks/commonHooks'
 
 test('Registration test @sanity, @master', async({page})=>{
 
-   await page.goto(TestConfig.appUrl)
-      await page.waitForTimeout(5000)
+   // await page.goto(TestConfig.appUrl)
+   //    await page.waitForTimeout(5000)
 
       let hp= new HomePage(page)
       await hp.forRegistration()

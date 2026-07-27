@@ -4,11 +4,13 @@ import {expect, test} from '@playwright/test'
 import { LoginPage } from '../pages/loginPage'
 import { HomePage } from '../pages/homePage'
 import { TestConfig } from '../test.config'
+import '../hooks/commonHooks'
+
 
 test('Login test @regression, @master', async({page})=>{
 
-   await page.goto(TestConfig.appUrl)
-   await page.waitForTimeout(5000)
+   // await page.goto(TestConfig.appUrl)
+   // await page.waitForTimeout(5000)
 
    let hp = new HomePage(page)
    await hp.forLogin()

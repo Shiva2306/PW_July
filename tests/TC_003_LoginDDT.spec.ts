@@ -6,6 +6,8 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/loginPage';
 import { DataProvider1 } from '../utils/dataProvider';
 import { TestConfig } from '../test.config';
+import '../hooks/commonHooks'
+
 
 
 // Load CSV test data
@@ -21,8 +23,8 @@ for (const data of testData) {
 
     test(`Login Test with CSV Data: ${data.testName} @datadriven, @master`, async ({ page }) => {
 
-         await page.goto(TestConfig.appUrl)
-           await page.waitForTimeout(2000)
+        //  await page.goto(TestConfig.appUrl)
+        //    await page.waitForTimeout(2000)
            
        let hp = new HomePage(page);
         await hp.forLogin()

@@ -6,6 +6,8 @@ import { TestConfig } from '../test.config';
 import { HomePage } from '../pages/homePage';
 import { LoginPage } from '../pages/loginPage';
 import { DataProvider1 } from '../utils/dataProvider';
+import '../hooks/commonHooks'
+
 
 
 
@@ -21,8 +23,8 @@ for(const data of jsonTestData)
 
        
        
-         await page.goto(TestConfig.appUrl)
-           await page.waitForTimeout(2000)
+        //  await page.goto(TestConfig.appUrl)
+        //    await page.waitForTimeout(2000)
 
             let hp = new HomePage(page);
         await hp.forLogin();
