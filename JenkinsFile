@@ -50,14 +50,14 @@ pipeline {
                     if (params.TEST_SUITE == 'all') {
                         testCommand = 'npx playwright test'
                     }
-                    else if (params.TEST_SUITE == 'smoke') {
-                        testCommand = 'npx playwright test --grep @smoke'
+                    else if (params.TEST_SUITE == 'sanity') {
+                        testCommand = 'npx playwright test --grep @sanity'
                     }
                     else if (params.TEST_SUITE == 'regression') {
                         testCommand = 'npx playwright test'
                     }
-                    else if (params.TEST_SUITE == 'api-smoke') {
-                        testCommand = 'npx playwright test --grep @api-smoke'
+                    else if (params.TEST_SUITE == 'datadriven') {
+                        testCommand = 'npx playwright test --grep @datadriven'
                     }
 
                     withEnv([
