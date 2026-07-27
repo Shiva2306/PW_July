@@ -9,7 +9,7 @@ export class SearchPage {
     public constructor(page: Page) {
         this.page = page;
         this.searchtext = page.getByRole('textbox', { name: 'Search' });
-        this.searchbutton = page.locator('(//button[type="button"])[4]');
+        this.searchbutton = page.locator('(//button[@type="button"])[4]');
     }
 
     public async searchProduct(sp: string): Promise<void> {
