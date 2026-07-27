@@ -29,13 +29,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'master',
-                    url: 'https://github.com/Shiva2306/Playwright_Framework_July.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
@@ -67,11 +60,12 @@ pipeline {
                         testCommand = 'npx playwright test --grep @api-smoke'
                     }
 
-                    bat """
-                        set ENV=${params.ENVIRONMENT}
-                        set BROWSER=${params.BROWSER}
-                        ${testCommand}
-                    """
+                    withEnv([
+                        "ENV=${params.ENVIRONMENT}",
+                        "BROWSER=${params.BROWSER}"
+                    ]) {
+                        bat testCommand
+                    }
                 }
             }
         }
