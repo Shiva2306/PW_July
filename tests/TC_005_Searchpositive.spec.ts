@@ -7,7 +7,7 @@ import '../hooks/commonHooks'
 
 test('TC_005_SearchProduct_Positive @sanity, @master', async ({ page }) => {
 
-  //  await page.goto(TestConfig.appUrl);
+   // await page.goto(TestConfig.appUrl);
 
     const sp = new SearchPage(page);
     
