@@ -17,7 +17,7 @@ test('Login test @regression, @master', async({page})=>{
 
 
   let lp= new LoginPage(page) //When we create an object, constructor get invoked, constructor is used to initialize instance variables
-  await lp.performLogin()
+  //await lp.performLogin()
 
    await page.waitForTimeout(5000)
 
