@@ -53,7 +53,7 @@ for (const data of testData) {
 
         }
 
-       await page.waitForTimeout(4000)
+       //await page.waitForTimeout(4000)
     })
 
 }
