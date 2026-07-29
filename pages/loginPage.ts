@@ -31,14 +31,14 @@ export class LoginPage
     }
 
     //Action methods
- /* 
+ 
    public async performLogin() : Promise<void>
     {
        await this.emailID.fill(TestConfig.email1)
        await this.password.fill(TestConfig.password1)
        await this.loginbutton.click()
-    } */
-   
+    } 
+/*    
 
 public async enteremail(emailid:string) 
 {
@@ -53,19 +53,19 @@ public async enterpassword(pass12: string)
 
 public async clickloginbutton()
 {
-   await this.loginbutton.click()
-}
+   await this.loginbutton.click() 
+}*/
   
  
 
 
 
-    public async isInvalidErrorMessage() : Promise<boolean>
+   /*  public async isInvalidErrorMessage() : Promise<boolean>
     {
         return await this.loginerrormessage.isVisible()
 
     }
-
+ */
     public async validateheaders() :Promise<string[]>
     {
        return this.headers.allInnerTexts()
