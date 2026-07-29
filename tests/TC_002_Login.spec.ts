@@ -24,7 +24,7 @@ test('Login test @regression, @master', async({page})=>{
    let headers= await lp.validateheaders()
    //  expect(headers).toHaveLength(3)
    // expect(headers).toEqual(['My Account', 'My Orders', 'My Affiliate Account', 'Newsletter'])
-    expect.soft(headers).toHaveLength(4)
+    expect.soft(headers).toHaveLength(2)
    expect.soft(headers).toEqual(['My Account', 'My Orders', 'My Affiliate Account', 'Newsletter'])
    //expect(headers).toContain('My Account')
 
