@@ -1,8 +1,14 @@
+
 pipeline {
     agent any
 
     tools {
         jdk 'JDK-21'
+    }
+
+    // Runs automatically every day at 10:00 PM
+    triggers {
+        cron('0 22 * * *')
     }
 
     parameters {
