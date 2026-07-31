@@ -105,7 +105,7 @@ pipeline {
         }
     }
 
-    post {
+  post {
 
         always {
 
@@ -144,6 +144,7 @@ pipeline {
                     allure([
                         includeProperties: false,
                         jdk: 'JDK-21',
+                        reportBuildPolicy: 'ALWAYS',
                         results: [[path: 'allure-results']]
                     ])
 
@@ -157,7 +158,8 @@ pipeline {
             // Archive raw Allure result files
             archiveArtifacts(
                 artifacts: 'allure-results/**',
-                allowEmptyArchive: true
+                allowEmptyArchive: true,
+                fingerprint: true
             )
         }
 
@@ -177,4 +179,3 @@ pipeline {
             echo "======================================="
         }
     }
-}
